@@ -3,6 +3,10 @@
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+h1 {
+    color: #000;
+}
+
 h3 {
     text-align: center;
 }

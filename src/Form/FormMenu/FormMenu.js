@@ -2,21 +2,27 @@ import { useState } from "react";
 import { toppings } from "./toppings";
 import "./styles.css";
 
-const getFormattedPrice = (price) => `$${price.toFixed(2)}`;
+const getFormattedPrice = (price) => `$${price.toFixed(0)}`;
 
 export default function FormMenu() {
-  const [checkedState, setCheckedState] = useState(
-    new Array(toppings.length).fill(false)
-  );
-
-  const [total, setTotal] = useState(0);
-
-  const handleOnChange = (position) => {
-    const updatedCheckedState = checkedState.map((item, index) =>
-      index === position ? !item : item
+    const [money, setMoney] = useState(0);
+    const [checkedState, setCheckedState] = useState(
+        new Array(toppings.length).fill(false)
     );
 
+    const [total, setTotal] = useState(0);
+
+    const inputMoney = (e) =>{
+        setMoney(e.target.value)
+    }
+
+    const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item
+        );
+
     setCheckedState(updatedCheckedState);
+    
 
     const totalPrice = updatedCheckedState.reduce(
       (sum, currentState, index) => {
@@ -33,6 +39,7 @@ export default function FormMenu() {
 
   return (
     <div className="App">
+        <input type="number" name ="money" onChange={inputMoney}/>
       <h3>Select Toppings</h3>
       <ul className="toppings-list">
         {toppings.map(({ name, price }, index) => {
@@ -61,7 +68,12 @@ export default function FormMenu() {
             <div className="right-section">{getFormattedPrice(total)}</div>
           </div>
         </li>
+        <h3>Số tiền khách đã đưa: {`$`+ parseInt(money)}</h3>
+        <h3>Tổng số tiền khách đã mua: {`$`+ parseInt(total)}</h3>
+        <h3>tiền thừa của khách: {`$`}{parseInt(money) - parseInt(total)}</h3>
+        {/* <h1 ></h1> */}
       </ul>
+      
     </div>
   );
 }
