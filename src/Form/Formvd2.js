@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import './test.css'
 
 class Formvd2 extends Component {
     constructor(props){
@@ -24,7 +24,8 @@ class Formvd2 extends Component {
     handInputjob = (event)=>{
         this.setState(
             {
-                job: event.target.type ==='radio' ? event.target.checked : event.target.value
+                // job: event.target.type ==='radio' ? event.target.checked : event.target.value
+                [event.target.name]: event.target.value
             },
         );
     };
@@ -51,7 +52,7 @@ class Formvd2 extends Component {
     };
     handSubmitChange = (event) =>{
         event.preventDefault();
-        alert("You are submiting" + " " + this.state.username + " " + this.state.job + " " + this.state.agree + " " + this.state.movie + " " + this.state.decription 
+            alert("You are submiting" + " " + this.state.username + " " + this.state.job + " " + this.state.agree + " " + this.state.movie + " " + this.state.decription 
         );
     }
     render() {
@@ -69,10 +70,10 @@ class Formvd2 extends Component {
                 </label><br/>
                 <label for="movie">Movie: 
                     <select onChange={this.handInputmovie}>
-                        <option value="black">kamen rider black</option>
-                        <option value="red">kamen rider red</option>
-                        <option value="yellow">kamen rider yellow</option>
-                        <option value="blu">kamen rider blu</option>
+                        <option value="black">black</option>
+                        <option value="red">red</option>
+                        <option value="yellow">yellow</option>
+                        <option value="blu">blu</option>
                     </select>
                 </label><br/>
                 <label for="decription">Decription
@@ -82,10 +83,10 @@ class Formvd2 extends Component {
                     <input type="submit"></input>
                 </label>
                 <h1>Hello {this.state.username}</h1>
-                <h1>Hello {this.state.job}</h1>
-                <h1>Hello {this.state.agree}</h1>
-                <h1>Hello {this.state.movie}</h1>
-                <h1>Hello {this.state.decription}</h1>
+                <h1>job{this.state.job}</h1>
+                <h1>agree{this.state.agree}</h1>
+                <h1>movie {this.state.movie}</h1>
+                <h1>decription {this.state.decription}</h1>
             </form>
         );
     }

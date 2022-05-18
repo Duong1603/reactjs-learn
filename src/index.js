@@ -6,7 +6,10 @@ import './index.css';
 // import Vidu4 from './Vidu4';
 // import Card from './Card';
 // import Form from './Form';
-import Formvd2 from './Formvd2';
+// import Formvd2 from './Formvd2';
+// import Formvd3 from './Form/Formvd3';
+// import FormScore from './Form/FormScore';
+import FormMenu from './Form/FormMenu/FormMenu';
 import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +20,10 @@ root.render(
     {/* <Vidu4 /> */}
     {/* <Card/> */}
     {/* <Form /> */}
-    <Formvd2 />
+    {/* <Formvd2 /> */}
+    {/* <Formvd3 /> */}
+    {/* <FormScore /> */}
+    <FormMenu />
   </React.StrictMode>
 );
 
