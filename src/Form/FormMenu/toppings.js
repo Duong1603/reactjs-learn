@@ -1,31 +1,31 @@
 export const toppings = [
     {
-      name: "Capsicum",
-      price: 1.2555
+      name: "Banana",
+      price: 10
     },
     {
       name: "Paneer",
-      price: 2.011
+      price: 20
     },
     {
       name: "Red Paprika",
-      price: 2.5222
+      price: 50
     },
     {
       name: "Onions",
-      price: 3.0344
+      price: 300
     },
     {
       name: "Extra Cheese",
-      price: 3.5546
+      price: 400
     },
     {
       name: "Baby Corns",
-      price: 3.0536
+      price: 250
     },
     {
       name: "Mushroom",
-      price: 2.043
+      price: 100
     }
   ];
   
