@@ -9,7 +9,8 @@ import './index.css';
 // import Formvd2 from './Formvd2';
 // import Formvd3 from './Form/Formvd3';
 // import FormScore from './Form/FormScore';
-import FormMenu from './Form/FormMenu/FormMenu';
+// import FormMenu from './Form/FormMenu/FormMenu';
+import CRUD from './CRUD/CRUD';
 import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +24,8 @@ root.render(
     {/* <Formvd2 /> */}
     {/* <Formvd3 /> */}
     {/* <FormScore /> */}
-    <FormMenu />
+    {/* <FormMenu /> */}
+    <CRUD />
   </React.StrictMode>
 );
 
